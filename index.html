@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333333;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #1f1f1f;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main class="container">
+        <section id="home" class="card">
+            <h2>Home</h2>
+            <p>Welcome to my personal portfolio website. Here you'll find information about my projects, skills, experience, and education.</p>
+        </section>
+        <section id="about" class="card">
+            <h2>About</h2>
+            <p>Hi, I'm Zeina, I have a passion for programming.</p>
+        </section>
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <ul>
+                <li>Task Tracker: Built a basic task tracker application .</li>
+                <li>Contact list Manager: Develpoed a simple contact list manager.</li>
+            </ul>
+        </section>
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <ul>
+                <li>python</li>
+                <li>MySQL</li>
+                <li>HTML</li>
+            </ul>
+        </section>
+        <section id="experience" class="card">
+            <h2>Experience</h2>
+            <p>Software Development Intern</p>
+        </section>
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <p> Bachelor of Science in Computer Science.</p>
+        </section>
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>You can reach me at zeinaamr90@yahoo.com.</p>
+            Phone:+4915736121497
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Zeina</p>
+    </footer>
+</body>
+</html>
