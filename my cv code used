@@ -1,0 +1,102 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{libertine} % Added font package for a different font style
+
+% Formatting commands
+\titleformat{\section}{\LARGE\bfseries}{}{0em}{\titlerule\vspace{0.3cm}}
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+
+% Define custom itemize spacing
+\setlist[itemize]{left=0em, label=\textbullet, itemsep=0.3em}
+
+% Personal information
+\def\firstname{Zeina}
+\def\lastname{Kotb}
+\def\address{Siemensstr, Berlin, Germany}
+\def\phone{+49 1573 6121497}
+\def\email{zeinaamr90@yahoo.com}
+
+\begin{document}
+
+% Title
+\begin{center}
+    {\huge \firstname \ \lastname}
+    
+    \vspace{0.2cm}
+    \address \\
+    \phone \ | \ \href{mailto:\email}{\email} \ 
+\end{center}
+
+\vspace{0.5cm}
+
+% About
+\section*{About}
+Aspiring Computer Science student with a strong foundation in programming, web development, and databases. Passionate about problem-solving and continuous learning. Seeking opportunities to apply my skills in real-world projects and contribute to innovative solutions.
+
+\vspace{0.5cm}
+
+% Education
+\section*{Education}
+
+\textbf{GISMA Business School} \\
+\textit{Bachelor of Science in Computer Science} \hfill \textbf{Sept 2023 - Sept 2026} \\
+Relevant Coursework: Data Structures, Algorithms, Databases
+
+\vspace{0.3cm}
+
+\textbf{International General Certificate of Secondary Education (IGCSE)} \hfill \textbf{Sept 2021 - Sept 2023} \\
+Relevant Subjects: Mathematics, Physics, Computer Science
+
+\vspace{0.5cm}
+
+% Skills
+\section*{Skills}
+
+\begin{itemize}
+    \item \textbf{Programming Languages}: Python
+    \item \textbf{Web Development}: HTML, CSS
+    \item \textbf{Databases}: MySQL
+    \item \textbf{Tools \& Technologies}: Git, GitHub
+    \item \textbf{Soft Skills}: Problem-solving, Teamwork, Communication, Critical Thinking, Time Management
+\end{itemize}
+
+\vspace{0.5cm}
+
+% Experience
+\section*{Experience}
+
+\textbf{Intern, Web Development} \\
+\textit{Siemens, Berlin, Germany} \hfill \textbf{Jan 2024 - March 2024}
+\begin{itemize}
+    \item Assisted in the development of front-end features for the company's main product using HTML and CSS
+    \item Collaborated with the design team to implement responsive web design.
+    \item Participated in code reviews and team meetings to enhance development processes.
+\end{itemize}
+
+\vspace{0.5cm}
+\newpage 
+% Certifications
+\section*{Certifications}
+
+\begin{itemize}
+    \item \textbf{Coursera}: Python for Everybody Specialization
+    \item \textbf{Udemy}: Complete Web Developer Bootcamp
+\end{itemize}
+
+\vspace{0.5cm}
+
+% Hobbies
+\section*{Hobbies}
+
+\begin{itemize}
+    \item Gym
+    \item Traveling
+    \item Learning New Programming Languages
+\end{itemize}
+
+\end{document}
