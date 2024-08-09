@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{libertine}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{background}
+
+\geometry{margin=1in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Project Report for Personal Portfolio}
+\fancyhead[R]{Zeina}
+\fancyfoot[C]{\thepage}
+
+\titleformat{\section}
+  {\Large\bfseries\color{teal}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\large\bfseries\color{darkblue}}
+  {\thesubsection}{1em}{}
+
+\renewcommand{\cftsecfont}{\bfseries\color{teal}}
+\renewcommand{\cftsubsecfont}{\bfseries\color{darkblue}}
+
+\title{\textbf{\color{teal}Project Report for Personal Portfolio}}
+\author{Zeina Kotb}
+\date{July 2024}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+}
+
+\backgroundsetup{
+  opacity=0.05,
+}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+This report provides an overview of the creation process of my personal portfolio website.
+
+\section{Portfolio URL and GitHub Repository}
+\begin{itemize}
+    \item \textbf{Portfolio URL}: \href{https://zeinaa111.github.io/}{\textcolor{blue}{https://zeinaa111.github.io/}} 
+    \item \textbf{GitHub Repository}: \href{https://github.com/Zeinaa111/Zeinaa111.github.io}{\textcolor{blue}{https://github.com/Zeinaa111/Zeinaa111.github.io}} 
+\end{itemize}
+
+\section{Portfolio Structure and Design Choices}
+
+\subsection{Header}
+Includes the website's title.
+
+\subsection{Navigation Bar}
+Links to different sections: Home, About, Projects, Skills, Experience, Education, and Contact.
+
+\subsection{Main Content}
+\begin{itemize}
+    \item \textbf{Home}: A welcome message and introduction.
+    \item \textbf{About}: A brief personal introduction.
+    \item \textbf{Projects}: Descriptions of completed projects.
+    \item \textbf{Skills}: A list of technical skills.
+    \item \textbf{Experience}: A summary of professional experience.
+    \item \textbf{Education}: Academic background.
+    \item \textbf{Contact}: Contact information.
+\end{itemize}
+
+\subsection{Footer}
+Contains copyright and additional info.
+
+\subsection{Design Choices}
+\begin{itemize}
+    \item \textbf{Dark Theme}: Modern appearance, reduces eye strain.
+    \item \textbf{Simple Layout}: Easy navigation and quick access to key information.
+    \item \textbf{Responsive Design}: Compatibility with various devices and screen sizes.
+\end{itemize}
+
+\section{Tools and Technologies Used}
+\begin{itemize}
+    \item \textbf{HTML}: For structuring the website content.
+    \item \textbf{CSS}: For styling the website.
+    \item \textbf{GitHub}: For version control and project hosting.
+\end{itemize}
+
+\section{Reflection}
+
+\subsection{Strengths}
+\begin{itemize}
+    \item \textbf{Clean Design}: Focus on the content.
+    \item \item \textbf{Easy Navigation}: Smooth transition between sections.
+    \item \item \textbf{Responsive Layout}: Great on a variety of devices.
+\end{itemize}
+
+\subsection{Weaknesses}
+\begin{itemize}
+    \item \textbf{Limited Interactivity}: Could benefit from more interactive elements.
+    \item \textbf{Basic Design}: Could be improved with more advanced CSS techniques.
+\end{itemize}
+
+\section{Future Improvements}
+\begin{itemize}
+    \item \textbf{Add More Projects}: Regularly update with new projects.
+    \item \textbf{Enhance Design}: Utilize more advanced CSS and incorporate JavaScript.
+    \item \textbf{Include a Blog}: For sharing knowledge and insights.
+    \item \textbf{Integrate Social Media}: Boost engagement and connectivity.
+\end{itemize}
+
+\end{document}
