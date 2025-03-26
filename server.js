@@ -1,33 +1,58 @@
-
-// server.js - Entry point for the backend
-
-const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const authRoutes = require('./routes/auth');
-const productRoutes = require('./routes/products');
-const cartRoutes = require('./routes/cart');
-const orderRoutes = require('./routes/orders');
+require('dotenv').config();  // Load environment variables from .env
+const cors = require('cors');  // Import CORS
 
-dotenv.config();
-
-const app = express();
-app.use(express.json());
-app.use(cors());
+const dbURI = process.env.MONGO_URI; // Your MongoDB connection string
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => console.log('MongoDB Connected'))
-.catch(err => console.log(err));
+mongoose.connect(dbURI)
+  .then(() => {
+    console.log('MongoDB Connected');
+  })
+  .catch((err) => {
+    console.log('MongoDB Connection Error:', err);
+  });
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/products', productRoutes);
-app.use('/api/cart', cartRoutes);
-app.use('/api/orders', orderRoutes);
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 5000;
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Middleware to parse JSON bodies
+app.use(express.json());
+app.use(cors());  // This line enables CORS
+
+// Add the Product model
+const Product = require('./models/Product');
+
+// Create a GET route for products
+app.get('/products', async (req, res) => {
+  try {
+    const products = await Product.find(); // Fetch all products from MongoDB
+    res.json(products); // Return products as JSON
+  } catch (err) {
+    res.status(500).json({ message: 'Server error while fetching products' });
+  }
+});
+
+// Create a POST route to add a new product
+app.post('/products', async (req, res) => {
+  const { name, price, description } = req.body; // Expecting these fields in the body
+  const newProduct = new Product({ name, price, description });
+
+  try {
+    const savedProduct = await newProduct.save(); // Save the product to MongoDB
+    res.status(201).json(savedProduct); // Return the saved product with a 201 status (created)
+  } catch (err) {
+    res.status(500).json({ message: 'Failed to save product' });
+  }
+});
+
+// Handle all other routes
+app.all('*', (req, res) => {
+  res.status(404).json({ message: 'Route not found' });
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
